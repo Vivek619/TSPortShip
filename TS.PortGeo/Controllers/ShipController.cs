@@ -78,7 +78,7 @@ namespace TS.PortGeo.Controllers
                 unitofWork.Complete();
             }
 
-            return Created(new Uri("GetShipById/" + ship.ID), shipDTO);
+            return CreatedAtAction("Create", shipDTO);
         }
 
         [HttpDelete]
